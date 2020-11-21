@@ -55,10 +55,7 @@ function modalIsOpen(event) {
     };
 
     refs.jsLightbox.classList.add('is-open');
-    
-    // console.log(event.target.nodeName);
-    addModalSrc(event);
-
+    addImgSrc(event);
 } 
 
 
@@ -71,21 +68,18 @@ function addImgSrc(event) {
 
 function modalIsClose() {
     refs.jsLightbox.classList.remove('is-open');
-    addModalSrc(event);
 }
 
 
 function cleanModalSrc() {
     refs.jsLightboxImage.src = '#';
-    refs.jsLightboxImage.alt = '';
-    
+    refs.jsLightboxImage.alt = '';   
 };
 
 function keyModalIsClose(event) {
 
     if (refs.jsLightbox.classList.contains('is-open') && event.code === 'Escape') {
         modalIsClose();
-    }
-    
+    }    
 }; 
 
